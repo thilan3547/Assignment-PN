@@ -25,4 +25,11 @@ describe('Stack Testing', () => {
             EnableDnsSupport: true
         })
     });
+    test('Vpc endpoint creation', () => {
+        template.hasResourceProperties('AWS::EC2::VPCEndpoint', {
+            VpcEndpointType: 'Interface',
+            ServiceName: 'com.amazonaws.vpce.us-east-1.vpce-svc-018e2dcbd8780cd57',
+            PrivateDnsEnabled: false
+        })
+    });
 });
