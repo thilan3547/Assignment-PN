@@ -1,3 +1,5 @@
+![test](https://github.com/thilan3547/Assignment-PN/actions/workflows/test.yml/badge.svg)
+
 ## PostNord Assignment - IaC Repo
 This repo contains all the CDK configurations required to create the AWS infrastructure for the PostNord assignment. Below is the list of infrastructure components created under this project.
 
