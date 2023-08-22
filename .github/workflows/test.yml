@@ -1,4 +1,4 @@
-name: Test CDK Stack
+name: test
 
 on:
   push:
