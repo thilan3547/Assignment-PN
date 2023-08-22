@@ -58,15 +58,6 @@ export class PNProjectServiceProviderEndStack extends cdk.Stack {
       allowedPrincipals: [new cdk.aws_iam.ArnPrincipal('arn:aws:iam::746247950449:root')]
     })
 
-    //Security Group for the NLB
-    const NLBSecurityGroup = new ec2.SecurityGroup(this, 'SecurityGroupforNLB', {
-      vpc,
-      allowAllOutbound: true,
-      disableInlineRules: true
-    });
-
-    NLBSecurityGroup.addIngressRule(ec2.Peer.anyIpv4(), ec2.Port.tcp(80), 'allow http access to the NLB');
-
     //Output the VPC endpoint ServiceName
     new cdk.CfnOutput(this, 'vpcendpointservicename', {
       exportName: 'VPC-Endpoint-service-name',
