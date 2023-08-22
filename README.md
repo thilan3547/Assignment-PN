@@ -1,6 +1,14 @@
-# The Responding Dark Laughter - IaC Repo
+# PostNord Assignment - IaC Repo
+This repo contains all the CDK configurations required to create the AWS infrastructure for the PostNord assignment. Below is the list of infrastructure components created under this project.
 
+- On AWS account A (refer to as consumer account)
+    - VPC endpoint
+    - Lambda fucntion
+    - Route53 private hosted zone
 
+- On AWS account B (refer to as service account)
+    - VPC interface endpoint
+    - NLB
 
 ## Architecture Diagram
 
