@@ -13,11 +13,11 @@ This repo contains all the CDK configurations required to create the AWS infrast
     - VPC interface endpoint
     - NLB
 
-## Architecture Diagram
+### Architecture Diagram
 
 ![Screenshot](Images/Screenshot.png)
 
-## Cross Account Connectivity
+### Cross Account Connectivity
 - A VPC Service Interface Endpoint was created at the Service account and linked to a NLB.
 
 ![Screenshot](Images/Screenshotserviceendpoint.png)
@@ -27,13 +27,13 @@ This repo contains all the CDK configurations required to create the AWS infrast
 
 ![Screenshot](Images/Screenshotendpoint.png)
 
-## High Availability
+### High Availability
 - The NLB was deployed across 2 AZs
 - The service app EC2 instances will be deployed across multiple AZs
 - The lambda function was deployed across 2 AZs
 - VPC Interface Endpoints are deployed across 2 AZs
 
-## Lambda log outputs for successful connection establishment
+### Lambda log outputs for successful connection establishment
 
 ![Screenshot](Images/lambdalog.png)
 
