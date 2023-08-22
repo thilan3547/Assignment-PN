@@ -37,3 +37,8 @@ This repo contains all the CDK configurations required to create the AWS infrast
 
 ![Screenshot](Images/lambdalog.png)
 
+#### Authors
+
+Romesh Samarakoon
+
+
