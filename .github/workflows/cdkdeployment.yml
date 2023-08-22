@@ -26,17 +26,7 @@ jobs:
           AWS_REGION: us-east-1
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: npx cdk deploy --all --app "npx ts-node main.ts" --require-approval never --concurrency 4
-
-      - name: Capture VPC Endpoint Service Name
-        id: vpc-endpoint-service-name
-        run: |
-          SERVICE_NAME=$(npx cdk synth --app "npx ts-node bin/main.ts" | jq -r '.metadata[] | select(.type == "aws:cdk:cloudformation:exportvalue") | .data.Name')
-          echo "::set-output name=service_name::$SERVICE_NAME"
-
-      - name: Use VPC Endpoint Service Name
-        run: |
-          echo "VPC Endpoint Service Name: ${{ steps.vpc-endpoint-service-name.outputs.service_name }}"
+        run: npx cdk deploy --all --app "npx ts-node postnord-service-consumer-stack.ts" --require-approval never --concurrency 4
 
       - name: Cleanup
         if: always()
