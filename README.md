@@ -15,17 +15,17 @@ This repo contains all the CDK configurations required to create the AWS infrast
 
 ## Architecture Diagram
 
-![Screenshot](Screenshot.png)
+![Screenshot](Images/Screenshot.png)
 
 ## Cross Account Connectivity
 - A VPC Service Interface Endpoint was created at the Service account and linked to a NLB.
 
-![Screenshot](Screenshotserviceendpoint.png)
+![Screenshot](Images/Screenshotserviceendpoint.png)
 
 
 - At the Consumer account, an Interface Endpoint was created and linked to the service name of the VPC Service Interface Endpoint at the Service account.
 
-![Screenshot](Screenshotendpoint.png)
+![Screenshot](Images/Screenshotendpoint.png)
 
 ## High Availability
 - The NLB was deployed across 2 AZs
@@ -33,19 +33,8 @@ This repo contains all the CDK configurations required to create the AWS infrast
 - The lambda function was deployed across 2 AZs
 - VPC Interface Endpoints are deployed across 2 AZs
 
-
-
 ## CICD
-
 From a developer releasing a new version of the TRDL app to provisioning pods with the new version, all the steps are automated and managed by Flux. The Flux repository which contains the flux components as well as manifest files related to the pods, services and ingress can be found at https://github.com/thilan3547/fluxcd-demo-3.
 
-
-## Future Improvements
-
-- Migrate the Terraform state from local to S3 with DynamoDB checksum
-- Use a user-friendly FQDN as the customer accessing URL
-- Use HTTPS endpoint with an ACM certificate
-
-### Authors
-
-Romesh Samarakoon
+## GitActions Status
+![GitActions Status](https://github.com/thilan3547/Assignment-PN/actions/workflows/cdkdeployment.yml/badge.svg)
