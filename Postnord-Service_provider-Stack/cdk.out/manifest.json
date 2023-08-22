@@ -1,0 +1,268 @@
+{
+  "version": "31.0.0",
+  "artifacts": {
+    "PostnordProjectServiceProviderEndStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "PostnordProjectServiceProviderEndStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "PostnordProjectServiceProviderEndStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "PostnordProjectServiceProviderEndStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/894ffd0defa84b010ef46ebc1493289dae336ba036441a05cc028540d7c73c4f.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "PostnordProjectServiceProviderEndStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "PostnordProjectServiceProviderEndStack.assets"
+      ],
+      "metadata": {
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPC51C4E3DE"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/public-subnetSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCpublicsubnetSubnet1Subnet3EBC7C01"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/public-subnetSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCpublicsubnetSubnet1RouteTable33C47A69"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/public-subnetSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCpublicsubnetSubnet1RouteTableAssociationC4B7CA7B"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/public-subnetSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCpublicsubnetSubnet1DefaultRoute5B6E2271"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/public-subnetSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCpublicsubnetSubnet1EIP36790F46"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/public-subnetSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCpublicsubnetSubnet1NATGateway8FCCF863"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/public-subnetSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCpublicsubnetSubnet2Subnet4B0CBDB2"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/public-subnetSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCpublicsubnetSubnet2RouteTable7CEBDA73"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/public-subnetSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCpublicsubnetSubnet2RouteTableAssociationFC68747A"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/public-subnetSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCpublicsubnetSubnet2DefaultRoute617F3A34"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/private-subnetSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCprivatesubnetSubnet1Subnet3BE3EE80"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/private-subnetSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCprivatesubnetSubnet1RouteTable5390166E"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/private-subnetSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCprivatesubnetSubnet1RouteTableAssociationBF882A11"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/private-subnetSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCprivatesubnetSubnet1DefaultRouteBA070DEE"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/private-subnetSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCprivatesubnetSubnet2Subnet3125EE01"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/private-subnetSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCprivatesubnetSubnet2RouteTableFBAE0525"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/private-subnetSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCprivatesubnetSubnet2RouteTableAssociation1FBFAEBB"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/private-subnetSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCprivatesubnetSubnet2DefaultRoute5CDC9242"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCIGWB46F48BA"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCVPCGW7A0CC48E"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderVPC/RestrictDefaultSecurityGroupCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderVPCRestrictDefaultSecurityGroupCustomResource2290D7D2"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderNLB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderNLB6BA451AB"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderNLB/nlblistener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderNLBnlblistenerFE2952D2"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProviderNLBTargetGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProviderNLBTargetGroup1FF51F74"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProvidervpcendpoint/ServiceProvidervpcendpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProvidervpcendpointF57B3B43"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/ServiceProvidervpcendpoint/Permissions": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceProvidervpcendpointPermissionsFA85581D"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/SecurityGroupforNLB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityGroupforNLB8474E56F"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/SecurityGroupforNLB/to 0.0.0.0_0:ALL TRAFFIC": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityGroupforNLBto00000ALLTRAFFIC3DBA169D"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/SecurityGroupforNLB/from 0.0.0.0_0:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityGroupforNLBfrom0000080372EE84C"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/vpcendpointservicename": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcendpointservicename"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/PostnordProjectServiceProviderEndStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "PostnordProjectServiceProviderEndStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
