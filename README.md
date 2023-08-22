@@ -18,11 +18,13 @@ This repo contains all the CDK configurations required to create the AWS infrast
 ![Screenshot](Screenshot.png)
 
 ## Cross Account Connectivity
-A VPC Service Interface Endpoint was created at the Service account and linked to a NLB. At the Consumer account, 
+- A VPC Service Interface Endpoint was created at the Service account and linked to a NLB.
+
 ![Screenshot](Screenshotserviceendpoint.png)
 
 
-an Interface Endpoint was created and linked to the service name of the VPC Service Interface Endpoint at the Service account.
+- At the Consumer account, an Interface Endpoint was created and linked to the service name of the VPC Service Interface Endpoint at the Service account.
+
 ![Screenshot](Screenshotendpoint.png)
 
 ## High Availability
