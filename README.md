@@ -4,7 +4,7 @@
 
 ## Architecture Diagram
 
-![Screenshot](screenshot.png)
+![Screenshot](Screenshot.png)
 
 ## High Availability
 
