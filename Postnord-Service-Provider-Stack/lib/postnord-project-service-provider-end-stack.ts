@@ -54,7 +54,7 @@ export class PNProjectServiceProviderEndStack extends cdk.Stack {
     //ServiceProvider VPC endpoint service for NLB creation
     const vpcinterfaceendpoint = new cdk.aws_ec2.VpcEndpointService(this, 'ServiceProvidervpcendpoint', {
       vpcEndpointServiceLoadBalancers: [nlb],
-      acceptanceRequired: true,
+      acceptanceRequired: false,
       allowedPrincipals: [new cdk.aws_iam.ArnPrincipal('arn:aws:iam::746247950449:root')]
     })
 
