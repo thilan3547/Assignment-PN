@@ -43,6 +43,6 @@ This repo contains all the CDK configurations required to create the AWS infrast
 An initial test case has been generated in the Postnord-Service-Consumer-Stack -> test folder. It will evaluate the configuration parameters for Lambda, VPC and VPCEndpoint to make sure they are within the recommended range. A GitActions workflow is in place to run the test case and verify the results. 
 
 #### Authors
-Romesh Samarakoonn
+Romesh Samarakoon
 
 
