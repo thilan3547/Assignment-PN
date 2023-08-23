@@ -32,7 +32,7 @@ export class PostnordServiceConsumerStackStack extends cdk.Stack {
     //serviceconsumer endpoint creation
     const interfacevpcendpoint = new ec2.InterfaceVpcEndpoint(this, 'vpcendpoint', {
       vpc,
-      service: new ec2.InterfaceVpcEndpointService('com.amazonaws.vpce.us-east-1.vpce-svc-018e2dcbd8780cd57', 80)
+      service: new ec2.InterfaceVpcEndpointService('com.amazonaws.vpce.us-east-1.vpce-svc-07db6ffc4ca7eb54c', 80)
     })
 
     //lambda function
