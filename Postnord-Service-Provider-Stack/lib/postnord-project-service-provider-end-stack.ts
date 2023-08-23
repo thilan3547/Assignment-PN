@@ -9,8 +9,8 @@ export class PNProjectServiceProviderEndStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    //ServiceProvider VPC creation
-    const vpc = new ec2.Vpc(this, 'ServiceProviderVPC', {
+    //servicesrovider vpc creation
+    const vpc = new ec2.Vpc(this, 'servicesrovidervpc', {
       ipAddresses: ec2.IpAddresses.cidr('10.5.0.0/16'),
       subnetConfiguration: [
         {
@@ -24,44 +24,44 @@ export class PNProjectServiceProviderEndStack extends cdk.Stack {
           cidrMask: 24,
         },
       ],
-       maxAzs: 2,
-       natGateways: 1
+      maxAzs: 2,
+      natGateways: 1
 
     })
 
-    //ServiceProvider private NLB creation
-    const nlb = new elbv2.NetworkLoadBalancer(this, 'ServiceProviderNLB', {
+    //servicesrovider private nlb creation
+    const nlb = new elbv2.NetworkLoadBalancer(this, 'serviceprovidernlb', {
       vpc,
       internetFacing: false,
-      vpcSubnets: {subnets: vpc.privateSubnets},
+      vpcSubnets: { subnets: vpc.privateSubnets },
     })
 
     const nlb_listener = nlb.addListener('nlblistener', {
       port: 80,
     })
 
-    //ServiceProvider NLB target group
-    const targetGroup = new elbv2.NetworkTargetGroup(this, 'ServiceProviderNLBTargetGroup', {
+    //serviceprovider nlb target group
+    const targetGroup = new elbv2.NetworkTargetGroup(this, 'serviceprovidernlbtargetgroup', {
       port: 80,
       vpc: vpc,
       targetType: elbv2.TargetType.INSTANCE
     });
 
-    nlb_listener.addAction('MyListenerAction', {
+    nlb_listener.addAction('listeneraction', {
       action: elbv2.NetworkListenerAction.forward([targetGroup])
     });
 
-    //ServiceProvider VPC endpoint service for NLB creation
-    const vpcinterfaceendpoint = new cdk.aws_ec2.VpcEndpointService(this, 'ServiceProvidervpcendpoint', {
+    //servicesrovider vpc endpoint service for nlb creation
+    const vpcinterfaceendpoint = new cdk.aws_ec2.VpcEndpointService(this, 'servicesrovidervpcendpoint', {
       vpcEndpointServiceLoadBalancers: [nlb],
       acceptanceRequired: false,
       allowedPrincipals: [new cdk.aws_iam.ArnPrincipal('arn:aws:iam::746247950449:root')]
     })
 
-    //Output the VPC endpoint ServiceName
+    //output the vpc endpoint servicename
     new cdk.CfnOutput(this, 'vpcendpointservicename', {
       exportName: 'VPC-Endpoint-service-name',
-      value:vpcinterfaceendpoint.vpcEndpointServiceName
+      value: vpcinterfaceendpoint.vpcEndpointServiceName
     })
   }
 }
